@@ -1,41 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jakob Bouchard &ndash; Portfolio pour l’UQAT</title>
-  <link rel="stylesheet" href="main.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jakob Bouchard &ndash; Portfolio pour l’UQAT</title>
+	<link rel="stylesheet" href="/main.css">
 
-  <script defer async src="main.js"></script>
+	<script async defer src="/main.js"></script>
+	<!-- <script async defer
+		src="https://umami.jakobbouchard.dev/umami.js"
+		data-website-id="af9b6f75-ba0d-4007-983d-191f934609d7"
+		data-do-not-track="true"
+		data-domains="uqat.jakobbouchard.dev"
+	></script> -->
 </head>
 <body>
-  <header>
-    <h1>Jakob Bouchard</h1>
-    <h2>Portfolio pour l’UQAT</h2>
-  </header>
-  <main>
-    <section>
-      <h3>À propos de moi</h3>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur aliquam ipsa expedita ab laboriosam reprehenderit quisquam repellat possimus sed eos iusto, ad nostrum fugit, explicabo eius voluptate error. Esse?</p>
-    </section>
-    <section>
-      <h3>Projets</h3>
-      <ul>
-        <li>
-          <img src="" alt="">
-          <h4>Titre du projet</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur aliquam ipsa expedita ab laboriosam reprehenderit quisquam repellat possimus sed eos iusto, ad nostrum fugit, explicabo eius voluptate error. Esse?</p>
-        </li>
-        <li>
-          <div class="iframe-container">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?controls=0" title="Demo reel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <h4>Titre du projet</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur aliquam ipsa expedita ab laboriosam reprehenderit quisquam repellat possimus sed eos iusto, ad nostrum fugit, explicabo eius voluptate error. Esse?</p>
-        </li>
-      </ul>
-    </section>
-  </main>
+	<header>
+		<h1>Jakob Bouchard</h1>
+		<h2>Portfolio pour l’UQAT</h2>
+		<a class="arrow" href="#content">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" width="64" height="64" viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+			</svg>
+		</a>
+	</header>
+	<main id="content">
+		<section id="about">
+			<h3>À propos de moi</h3>
+			<p>
+				Bonjour, 👋 mon nom est Jakob, je suis développeur web chez Prosomo. Voici mon portfolio pour le programme <em>Création et nouveaux médias</em>. Sur cette page vous trouverez &lt;INSÉRER NB DE PROJETS&gt; projets que j’ai réalisés. Ce sont tous des projets dont je suis plutôt fiers, certains de ces projets sont en jeux vidéos, d’autres en 3D, certains en web. Je crois que la diversité des projets démontrent bien mes habiletés de programmation.
+			</p>
+			<p>
+				Si vous voulez en connaître plus à propos de moi (ou mes chats 🐱), consultez <a href="https://jakobbouchard.dev/" target="_blank" hreflang="en">mon site personnel</a> (disponible en anglais seulement).
+			</p>
+		</section>
+		<section>
+			<h3>Projets</h3>
+			<ul class="project-list">
+				<li>
+					<h4>Galerie Artblr <span class="tag">Jeu vidéo</span> <span class="tag">XR</span> <span class="tag">Godot</span></h4>
+					<p>
+						Artblr est un des plus gros sites web que Distantia gère. Il s’agit d’une galerie d’art en ligne, où vous pouvez voir les œuvres de différents artistes. Environ au début décembre, mon gestionnaire de projet a voulu de créer une expérience VR pour cette galerie. Le but était de lancer la plus grande galerie d’art virtuelle au monde. Au total, plus de 30 000 œuvres sont répertoriés sur le site web, réalisées par plus de 6300 artistes. Je suis le seul programmeur qui a réalisé cette expérience. Outre l’application VR, j’ai dû me créer un API afin de pouvoir récupérer les œuvres.
+					</p>
+					<p>
+						L’application a été réalisée à l’aide du moteur de jeu libre et gratuit, <a href="https://godotengine.org" target="_blank">Godot</a>. N’ayant jamais vraiment programmé de jeu vidéo auparavant, j’avais peur que le VR soit complexe et difficile à implémenter, mais je n’ai seulement eu besoin que d’un seul plugin. J’ai bien entendu rencontré plusieurs défis tout de même, puisqu’entre autre, le forfait gratuit d’Artblr limite les artistes à deux œuvres seulement. Alors j’ai dû créer un système pouvant charger différentes salles, dépendant du nombre d’œuvres que l’artiste a réalisé. De plus, on devait avoir des salles permettant de voir les œuvres d’un pays, donc certaines «&nbsp;sous-galleries&nbsp;» avaient une très grande quantité d’œuvres, ce qui nuisait à la performance.
+					</p>
+					<p>
+						Si vous souhaitez essayer le projet, il est disponible sur l'<a target="_blank" href="https://www.oculus.com/experiences/quest/4681335845289097/">App Lab, pour Oculus Quest</a>.
+					</p>
+					<div class="iframe-container">
+						<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?controls=0" title="Demo reel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</li>
+				<li>
+					<h4>Des beignes&nbsp;! <span class="tag">Animation</span> <span class="tag">3D</span> <span class="tag">Blender</span></h4>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur aliquam ipsa expedita ab laboriosam reprehenderit quisquam repellat possimus sed eos iusto, ad nostrum fugit, explicabo eius voluptate error. Esse?
+					</p>
+					<div class="iframe-container">
+						<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?controls=0" title="Demo reel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</li>
+			</ul>
+		</section>
+	</main>
+	<footer>
+		<p>
+			<a href="https://jakobbouchard.dev/" target="_blank" hreflang="en">Mon site personnel (anglais)</a> &mdash; <a target="_blank" href="https://umami.jakobbouchard.dev/share/JSbOvbRD/Portfolio%20UQAT">Analytics de la page</a>
+		</p>
+	</footer>
 </body>
 </html>
