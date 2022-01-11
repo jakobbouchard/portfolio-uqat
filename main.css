@@ -27,11 +27,11 @@ header {
 }
 header h1 {
   margin: 0;
-  animation: .5s ease 0s 1 slideDown;
+  animation: .75s ease 0s 1 slideDown;
 }
 header h2 {
   margin: 0;
-  animation: .75s ease 0s 1 slideDownDelayed;
+  animation: 1s ease 0s 1 slideDownDelayed;
 }
 main {
   margin: auto;
