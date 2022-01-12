@@ -273,6 +273,12 @@ footer {
 	87.5%  {color: #ffff00;}
 	100%   {color: #ff0000;}
 }
+body.rainbow {
+	animation: 5s linear 0s infinite rainbow-text;
+}
+body.rainbow header {
+	animation: 5s linear 0s infinite rainbow-background;
+}
 
 /*** Media queries ***/
 @media screen and (max-width: 768px) {

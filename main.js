@@ -16,8 +16,7 @@
 		// If complete, alert and reset
 		if (pattern.length === current) {
 			current = 0;
-			document.body.style.animation = '10s linear 0s infinite rainbow-text';
-			document.querySelector('header').style.animation = '10s linear 0s infinite rainbow-background';
+			document.body.classList.toggle('rainbow');
 		}
 
 	};
