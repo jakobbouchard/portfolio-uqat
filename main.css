@@ -47,7 +47,7 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #fff;
+	background-color: #ecfdf5;
 }
 ::selection {
 	background-color: #064e3b;
@@ -250,6 +250,28 @@ footer {
 	100% {
 		transform: translateY(0);
 	}
+}
+@keyframes rainbow-background {
+	0%     {background-color: #ff0000;}
+	12.5%  {background-color: #ffff00;}
+	25%    {background-color: #00ff00;}
+	37.5%  {background-color: #00ffff;}
+	50%    {background-color: #0000ff;}
+	62.5%  {background-color: #00ffff;}
+	75%    {background-color: #00ff00;}
+	87.5%  {background-color: #ffff00;}
+	100%   {background-color: #ff0000;}
+}
+@keyframes rainbow-text {
+	0%     {color: #ff0000;}
+	12.5%  {color: #ffff00;}
+	25%    {color: #00ff00;}
+	37.5%  {color: #00ffff;}
+	50%    {color: #0000ff;}
+	62.5%  {color: #00ffff;}
+	75%    {color: #00ff00;}
+	87.5%  {color: #ffff00;}
+	100%   {color: #ff0000;}
 }
 
 /*** Media queries ***/
