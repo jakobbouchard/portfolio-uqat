@@ -31,9 +31,9 @@
 /*** Base ***/
 :root {
 	box-sizing: border-box;
-  font-family: Atkinson, sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.5;
+	font-family: Atkinson, sans-serif;
+	font-size: 1.25rem;
+	line-height: 1.5;
 	--content-width: 1280px;
 }
 *,
@@ -42,16 +42,16 @@
 	box-sizing: inherit;
 }
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
 }
 ::selection {
-  background-color: #064e3b;
-  color: #ecfdf5;
+	background-color: #064e3b;
+	color: #ecfdf5;
 }
 h3 {
 	margin: .5em 0;
@@ -81,28 +81,28 @@ main:focus {
 /* Header */
 header {
 	position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #064e3b;
-  color: #ecfdf5;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #064e3b;
+	color: #ecfdf5;
 }
 header ::selection {
-  background-color: #ecfdf5;
-  color: #064e3b;
+	background-color: #ecfdf5;
+	color: #064e3b;
 }
 header .face {
 	height: 250px;
 }
 header h1 {
-  margin: 0;
-  animation: .75s ease 0s 1 title;
+	margin: 0;
+	animation: .75s ease 0s 1 title;
 }
 header h2 {
-  margin: 0;
-  animation: 1s ease 0s 1 subtitle;
+	margin: 0;
+	animation: 1s ease 0s 1 subtitle;
 }
 header .arrow {
 	position: absolute;
@@ -113,7 +113,7 @@ header .arrow {
 	transition: transform .5s ease;
 }
 header .arrow svg {
-  animation: 1.5s ease 0s 1 arrow, 2.5s ease-out 2s infinite arrow-loop;
+	animation: 1.5s ease 0s 1 arrow, 2.5s ease-out 2s infinite arrow-loop;
 }
 header .arrow:hover {
 	transform: scale(1.1) translateX(calc(-50% / 1.1));
@@ -123,34 +123,19 @@ header .arrow:hover svg {
 }
 /* Content */
 main {
-  margin: auto;
-  padding: 1rem 1.5rem;
-  max-width: var(--content-width);
+	margin: auto;
+	padding: 1rem 1.5rem;
+	max-width: var(--content-width);
 }
 main section + section {
 	margin-top: 2rem;
-}
-main .iframe-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-}
-main .iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-	border: 5px solid #064e3b;
 }
 main .project-list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
-main .project-list li + li {
+main .project-list > li + li {
 	margin-top: 2rem;
 }
 main .project-list h4 {
@@ -171,11 +156,37 @@ main .project-list h4 .tag {
 main .project-list h4 .tag + .tag {
 	margin-left: .25rem;
 }
+main .iframe-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+}
+main .iframe-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 5px solid #064e3b;
+}
+main .project-list .videos {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: .5rem;
+}
+main .project-list .videos .iframe-container {
+	flex: 1;
+	padding-bottom: calc(56.25% / 2);
+}
 /* Footer */
 footer {
-  margin: auto;
-  padding: 1rem 1.5rem;
-  max-width: var(--content-width);
+	margin: auto;
+	padding: 1rem 1.5rem;
+	max-width: var(--content-width);
 	text-align: center;
 	font-size: .75rem;
 	color: #999;
@@ -183,28 +194,28 @@ footer {
 
 /*** Animations ***/
 @keyframes title {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 @keyframes subtitle {
-  0% {
-    transform: translateY(-50%);
-    opacity: 0;
-  }
-  33% {
-    transform: translateY(-50%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+	0% {
+		transform: translateY(-50%);
+		opacity: 0;
+	}
+	33% {
+		transform: translateY(-50%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 @keyframes arrow {
 	0% {
@@ -238,5 +249,18 @@ footer {
 	}
 	100% {
 		transform: translateY(0);
+	}
+}
+
+/*** Media queries ***/
+@media screen and (max-width: 768px) {
+	main .project-list .videos {
+		display: block;
+	}
+	main .project-list .videos .iframe-container {
+		padding-bottom: 56.25%;
+	}
+	main .project-list .videos .iframe-container + .iframe-container {
+		margin-top: .5rem;
 	}
 }
