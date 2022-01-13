@@ -289,21 +289,19 @@ body.rainbow {
 body.rainbow a {
 	animation: 5s linear 0s infinite rainbow-text;
 }
-body.rainbow::selection {
-	animation: 5s linear 0s infinite rainbow-background;
-	color: #212121;
+body.rainbow ::selection {
+	background-color: #eee !important;
+	color: #212121 !important;
 }
 body.rainbow header,
-body.rainbow .tag {
+body.rainbow .project-list h4 .tag {
 	animation: 5s linear 0s infinite rainbow-background;
 	color: #212121;
 }
-body.rainbow header ::selection,
-body.rainbow .tag::selection {
-	background-color: #212121;
-	animation: 5s linear 0s infinite rainbow-text;
+body.rainbow header .arrow svg {
+	color: #212121;
 }
-body.rainbow .iframe-container {
+body.rainbow .iframe-container iframe {
 	animation: 5s linear 0s infinite rainbow-border;
 }
 
