@@ -264,6 +264,15 @@ footer {
 	83.33%  {background-color: #f0f}
 	100%    {background-color: #f00}
 }
+@keyframes rainbow-border {
+	0%      {border-color: #f00}
+	16.67%  {border-color: #ff0}
+	33.33%  {border-color: #0f0}
+	50%     {border-color: #0ff}
+	66.67%  {border-color: #00f}
+	83.33%  {border-color: #f0f}
+	100%    {border-color: #f00}
+}
 @keyframes rainbow-text {
 	0%      {color: #f00}
 	16.67%  {color: #ff0}
@@ -274,10 +283,28 @@ footer {
 	100%    {color: #f00}
 }
 body.rainbow {
+	background-color: #212121;
 	animation: 5s linear 0s infinite rainbow-text;
 }
-body.rainbow header {
+body.rainbow a {
+	animation: 5s linear 0s infinite rainbow-text;
+}
+body.rainbow::selection {
 	animation: 5s linear 0s infinite rainbow-background;
+	color: #212121;
+}
+body.rainbow header,
+body.rainbow .tag {
+	animation: 5s linear 0s infinite rainbow-background;
+	color: #212121;
+}
+body.rainbow header ::selection,
+body.rainbow .tag::selection {
+	background-color: #212121;
+	animation: 5s linear 0s infinite rainbow-text;
+}
+body.rainbow .iframe-container {
+	animation: 5s linear 0s infinite rainbow-border;
 }
 
 /*** Media queries ***/
