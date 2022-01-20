@@ -69,6 +69,11 @@ a {
 a:hover {
 	text-decoration: none;
 }
+abbr {
+	text-decoration: underline;
+	text-decoration-style: dashed;
+	cursor: help;
+}
 :focus {
 	outline: 2px dashed;
 	outline-offset: 0.25rem;
