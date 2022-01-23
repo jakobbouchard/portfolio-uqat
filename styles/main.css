@@ -179,7 +179,7 @@ main .iframe-container iframe {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	border: 5px solid --primary-color-dark;
+	border: 5px solid var(--primary-color-dark);
 }
 main .project-list .videos {
 	display: flex;
