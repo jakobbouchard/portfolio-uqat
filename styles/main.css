@@ -74,6 +74,11 @@ abbr {
 	text-decoration-style: dashed;
 	cursor: help;
 }
+code {
+  border-radius: .2rem;
+  padding: .1rem .3rem .2rem;
+  background: #e0e0e0;
+}
 :focus {
 	outline: 2px dashed;
 	outline-offset: 0.25rem;
