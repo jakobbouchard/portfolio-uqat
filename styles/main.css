@@ -86,6 +86,15 @@ code {
 main:focus {
 	outline: none;
 }
+/* Hide text, for accessibility only */
+.sr-only {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
 
 /*** Content ***/
 /* Header */
