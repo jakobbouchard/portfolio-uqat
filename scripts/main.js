@@ -1,8 +1,10 @@
 (function() {
+
+	// Konami code
 	const pattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
 	let current = 0;
 
-	const keyHandler = function (event) {
+	function keyHandler(event) {
 		// If the key isn't in the pattern, or isn't the current key in the pattern, reset
 		if (pattern.indexOf(event.key) < 0 || event.key !== pattern[current]) {
 			current = 0;
@@ -12,17 +14,17 @@
 		// Update how much of the pattern is complete
 		current++;
 
-		// If complete, alert and reset
+		// If complete, toggle class and reset
 		if (pattern.length === current) {
 			current = 0;
 			document.body.classList.toggle('rainbow');
 		}
-
 	};
 
 	// Listen for keydown events
-	document.addEventListener('keydown', keyHandler, false);
+	document.addEventListener('keydown', keyHandler);
 
+	// Add selection to `code` tags
 	function selectText(node) {
 		if (document.body.createTextRange) {
 			const range = document.body.createTextRange();
@@ -35,13 +37,32 @@
 			selection.removeAllRanges();
 			selection.addRange(range);
 		} else {
-			console.warn("Could not select text in node: Unsupported browser.");
+			console.warn('Could not select text in node: Unsupported browser.');
 		}
 	}
 	document.querySelectorAll('code').forEach((el) => {
-		el.addEventListener('click', () => {
-			// Select the text
-			selectText(el);
-		});
+		el.addEventListener('click', () => selectText(el));
+	});
+
+	// Lazy-load YouTube
+	document.querySelectorAll('.youtube').forEach((el) => {
+    const image = new Image();
+		image.src = 'https://img.youtube.com/vi/'+ el.dataset.embed +'/sddefault.jpg';
+		image.alt = el.dataset.title;
+		image.loading = 'lazy';
+		image.addEventListener('load', () => el.appendChild(image));
+
+		el.addEventListener('click', (event) => {
+			const container = event.currentTarget;
+			const iframe = document.createElement('iframe');
+			iframe.title = container.dataset.title;
+			iframe.allowFullscreen = true;
+			iframe.loading = 'lazy';
+			iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+			iframe.src = 'https://www.youtube-nocookie.com/embed/'+ container.dataset.embed +'?rel=0&showinfo=0&autoplay=1';
+
+			container.innerHTML = '';
+			container.appendChild(iframe);
+    });
 	});
 })();

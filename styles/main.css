@@ -180,20 +180,60 @@ main .project-list h4 .tag::selection {
 main .project-list h4 .tag + .tag {
 	margin-left: .25rem;
 }
-main .iframe-container {
+main .youtube {
+	border: 5px solid var(--primary-color-dark);
+	background-color: #000;
+	margin-bottom: 30px;
 	position: relative;
 	padding-bottom: 56.25%;
+	max-width: 100%;
 	height: 0;
 	overflow: hidden;
-	max-width: 100%;
+	cursor: pointer;
 }
-main .iframe-container iframe {
+main .youtube img {
+	width: 100%;
+	top: -16.84%;
+	left: 0;
+	opacity: 0.7;
+}
+main .youtube .play-button {
+	width: 90px;
+	height: 60px;
+	background-color: #333;
+	box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
+	z-index: 1;
+	opacity: 0.8;
+	border-radius: 6px;
+}
+main .youtube .play-button:before {
+	content: "";
+	border-style: solid;
+	border-width: 15px 0 15px 26.0px;
+	border-color: transparent transparent transparent #fff;
+}
+main .youtube img,
+main .youtube .play-button {
+	cursor: pointer;
+}
+main .youtube img,
+main .youtube iframe,
+main .youtube .play-button,
+main .youtube .play-button:before {
 	position: absolute;
+}
+main .youtube .play-button,
+main .youtube .play-button:before {
+	top: 50%;
+	left: 50%;
+	transform: translate3d( -50%, -50%, 0 );
+}
+main .youtube iframe {
+	border: 0;
+	height: 100%;
+	width: 100%;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
-	border: 5px solid var(--primary-color-dark);
 }
 main .project-list .videos {
 	display: flex;
@@ -202,7 +242,7 @@ main .project-list .videos {
 	justify-content: center;
 	gap: .5rem;
 }
-main .project-list .videos .iframe-container {
+main .project-list .videos .youtube {
 	flex: 1;
 	padding-bottom: calc(56.25% / 2);
 }
@@ -321,7 +361,7 @@ body.rainbow .project-list h4 .tag {
 body.rainbow header .arrow svg {
 	color: #222;
 }
-body.rainbow .iframe-container iframe {
+body.rainbow .youtube iframe {
 	animation: 5s linear 0s infinite rainbow-border;
 }
 
@@ -330,10 +370,10 @@ body.rainbow .iframe-container iframe {
 	main .project-list .videos {
 		display: block;
 	}
-	main .project-list .videos .iframe-container {
+	main .project-list .videos .youtube {
 		padding-bottom: 56.25%;
 	}
-	main .project-list .videos .iframe-container + .iframe-container {
+	main .project-list .videos .youtube + .youtube {
 		margin-top: .5rem;
 	}
 }
