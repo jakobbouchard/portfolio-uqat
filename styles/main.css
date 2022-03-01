@@ -69,6 +69,16 @@ a {
 a:hover {
 	text-decoration: none;
 }
+details {
+	margin: 1em 0;
+}
+details > summary {
+	cursor: pointer;
+}
+details:not([open]) > summary::after {
+	content: " Lire plus";
+	font-weight: 700;
+}
 abbr {
 	text-decoration: underline;
 	text-decoration-style: dashed;

@@ -82,18 +82,21 @@
 						<span class="tag">XR / Oculus</span>
 						<span class="tag">Godot</span>
 					</h4>
-					<p>
-						Artblr est un des plus gros sites web que Prosomo/Distantia gère. Il s’agit d’une galerie d’art en ligne, où vous pouvez voir les œuvres de différents artistes. Environ au début décembre 2021, mon gestionnaire de projet a voulu de créer une expérience VR pour cette galerie. Le but était de lancer la plus grande galerie d’art virtuelle au monde. Au total, plus de 30 000 œuvres sont répertoriés sur le site web, réalisées par plus de 6300 artistes. Je suis le seul programmeur qui a réalisé cette expérience. Outre l’application VR, j’ai dû me créer un API afin de pouvoir récupérer les œuvres.
-					</p>
-					<p>
-						L’application a été réalisée à l’aide du moteur de jeu libre et gratuit, <a href="https://godotengine.org">Godot</a>. N’ayant jamais vraiment programmé de jeu vidéo auparavant, j’avais peur que le VR soit complexe et difficile à implémenter, mais je n’ai seulement eu besoin que d’un seul plugin. J’ai bien entendu rencontré plusieurs défis tout de même, puisqu’entre autre, le forfait gratuit d’Artblr limite les artistes à deux œuvres seulement. Alors j’ai dû créer un système pouvant charger différentes salles, dépendant du nombre d’œuvres que l’artiste a réalisé. De plus, on devait avoir des salles permettant de voir les œuvres d’un pays, donc certaines «&nbsp;sous-galleries&nbsp;» avaient une très grande quantité d’œuvres, ce qui nuisait à la performance.
-					</p>
-					<!-- <p>
-						Si vous souhaitez essayer le projet, vous pouvez vous inscrire pour la version bêta sur l’<a href="https://www.oculus.com/experiences/quest/4681335845289097/">App Lab, pour Oculus Quest</a>.
-					</p> -->
-					<p>
-						Au moment de la création de ce site, le projet est toujours en cours de développement et n’est pas encore disponible au public. La vidéo ci-dessous n’est pas représentative du projet final, mais elle montre une partie de l’expérience VR et représente bien l’idée générale.
-					</p>
+					<details>
+						<summary>Une expérience VR / XR qui est en fait une galerie d’art contenant les œuvres de plus de 6000 artistes. Le contenu est tiré de la base de données d’Artblr, un site web de Distantia. L’expérience est présentement optimisée pour les appareils Meta/Oculus Quest, et a été construit dans Godot.</summary>
+						<p>
+							Artblr est un des plus gros sites web que Prosomo/Distantia gère. Il s’agit d’une galerie d’art en ligne, où vous pouvez voir les œuvres de différents artistes. Environ au début décembre 2021, mon gestionnaire de projet a voulu de créer une expérience VR pour cette galerie. Le but était de lancer la plus grande galerie d’art virtuelle au monde. Au total, plus de 30 000 œuvres sont répertoriés sur le site web, réalisées par plus de 6300 artistes. Je suis le seul programmeur qui a réalisé cette expérience. Outre l’application VR, j’ai dû me créer un API afin de pouvoir récupérer les œuvres.
+						</p>
+						<p>
+							L’application a été réalisée à l’aide du moteur de jeu libre et gratuit, <a href="https://godotengine.org">Godot</a>. N’ayant jamais vraiment programmé de jeu vidéo auparavant, j’avais peur que le VR soit complexe et difficile à implémenter, mais je n’ai seulement eu besoin que d’un seul plugin. J’ai bien entendu rencontré plusieurs défis tout de même, puisqu’entre autre, le forfait gratuit d’Artblr limite les artistes à deux œuvres seulement. Alors j’ai dû créer un système pouvant charger différentes salles, dépendant du nombre d’œuvres que l’artiste a réalisé. De plus, on devait avoir des salles permettant de voir les œuvres d’un pays, donc certaines «&nbsp;sous-galleries&nbsp;» avaient une très grande quantité d’œuvres, ce qui nuisait à la performance.
+						</p>
+						<!-- <p>
+							Si vous souhaitez essayer le projet, vous pouvez vous inscrire pour la version bêta sur l’<a href="https://www.oculus.com/experiences/quest/4681335845289097/">App Lab, pour Oculus Quest</a>.
+						</p> -->
+						<p>
+							Au moment de la création de ce site, le projet est toujours en cours de développement et n’est pas encore disponible au public. La vidéo ci-dessous n’est pas représentative du projet final, mais elle montre une partie de l’expérience VR et représente bien l’idée générale.
+						</p>
+					</details>
 					<div class="youtube" data-embed="rLD5zsYyT1g" data-title="Démo : Galerie Artblr">
 						<div class="play-button"></div>
 					</div>
@@ -105,12 +108,17 @@
 						<span class="tag">3D</span>
 						<span class="tag">Godot</span>
 					</h4>
-					<p>
-						Malgré mon gros projet de VR (Artblr), je n’avais toujours pas pris le temps de faire un jeu vidéo. Donc, en 2 fins de semaines, j’ai pris le temps de créer un clone/un jeu dans le style de Doom (1993). Le jeu a été développé à l’aide du moteur de jeu libre et gratuit, <a href="https://godotengine.org">Godot</a>. Malheureusement, je n’ai pas eu le temps de créer plusieurs niveaux, ni le temps de faire l’artwork moi-même, mais je suis tout de même plutôt heureux du résultat compte tenu du temps que j’ai passé à le faire. Un système de vie, de munitions, de mort est complètement implémenté. De plus, les ennemis sont capables de contourner les obstacles et d’atteindre le joueur. Si j’avais eu plus de temps, j’aurais créé plus de niveaux et un menu pause. Grâce au système de <em>GridMap</em> de Godot, il est possible de créer des niveaux rapidement.
-					</p>
-					<p>
-						Le projet est jouable et téléchargeable sur <a href="https://jakobbouchard.itch.io/doom-clone-demo">itch.io</a>. La page est protégée par un mot de passe, <code>uqat2022</code>.
-					</p>
+					<details>
+						<summary>
+							Une simple demo de jeu dans le style de Doom (1993) / Wolfenstein 3D (1992), fait en 2 fins de semaine. Le but était d’apprendre à programmer une AI qui est capable d’éviter les murs/obstacles. Malgré l’état simple du jeu, j’ai rencontré plusieurs défis, et si j’avais eu plus de temps, j’aurais facilement pu créer plusieurs niveaux grâce à la manière dont j’ai organisé les données.
+						</summary>
+						<p>
+							Malgré mon gros projet de VR (Artblr), je n’avais toujours pas pris le temps de faire un jeu vidéo. Donc, en 2 fins de semaines, j’ai pris le temps de créer un clone/un jeu dans le style de Doom (1993). Le jeu a été développé à l’aide du moteur de jeu libre et gratuit, <a href="https://godotengine.org">Godot</a>. Malheureusement, je n’ai pas eu le temps de créer plusieurs niveaux, ni le temps de faire l’artwork moi-même, mais je suis tout de même plutôt heureux du résultat compte tenu du temps que j’ai passé à le faire. Un système de vie, de munitions, de mort est complètement implémenté. De plus, les ennemis sont capables de contourner les obstacles et d’atteindre le joueur. Si j’avais eu plus de temps, j’aurais créé plus de niveaux et un menu pause. Grâce au système de <em>GridMap</em> de Godot, il est possible de créer des niveaux rapidement.
+						</p>
+						<p>
+							Le projet est jouable et téléchargeable sur <a href="https://jakobbouchard.itch.io/doom-clone-demo">itch.io</a>. La page est protégée par un mot de passe, <code>uqat2022</code>.
+						</p>
+					</details>
 					<div class="youtube" data-embed="2RXYxFi3aZE" data-title="Doom Clone">
 						<div class="play-button"></div>
 					</div>
@@ -122,12 +130,17 @@
 						<span class="tag">3D</span>
 						<span class="tag">Blender</span>
 					</h4>
-					<p>
-						J’ai toujours été intéressé par la modélisation 3D et les animations, donc j’ai suivi <a href="https://www.youtube.com/playlist?list=PLjEaoINr3zgEq0u2MzVgAaHEBt--xLB6U">un tutoriel</a> afin d’avoir une bonne base dans Blender. Le but était de créer un beigne de toute pièce, ainsi que de créer une animation de ce beigne et d’une tasse de café. Après avoir terminé le tutoriel, j’ai voulu en apprendre plus sur le système de physiques de Blender, alors j’ai créé une animation où des centaines de beignes tombent sur une assiette. J’ai également créé un genre de morceau de viande, qui est un peu plus complexe.
-					</p>
-					<p>
-						Voici l’animation des centaines de beignes et celle du morceau de viande. Si vous souhaitez voir le beigne avec la tasse de café, je l’ai <a href="https://www.instagram.com/p/B9_Aq-mnAtx/">posté sur Instagram</a>.
-					</p>
+					<details>
+						<summary>
+							Des exercices de modélisation 3D et d’animation, faits dans Blender.
+						</summary>
+						<p>
+							J’ai toujours été intéressé par la modélisation 3D et les animations, donc j’ai suivi <a href="https://www.youtube.com/playlist?list=PLjEaoINr3zgEq0u2MzVgAaHEBt--xLB6U">un tutoriel</a> afin d’avoir une bonne base dans Blender. Le but était de créer un beigne de toute pièce, ainsi que de créer une animation de ce beigne et d’une tasse de café. Après avoir terminé le tutoriel, j’ai voulu en apprendre plus sur le système de physiques de Blender, alors j’ai créé une animation où des centaines de beignes tombent sur une assiette. J’ai également créé un genre de morceau de viande, qui est un peu plus complexe.
+						</p>
+						<p>
+							Voici l’animation des centaines de beignes et celle du morceau de viande. Si vous souhaitez voir le beigne avec la tasse de café, je l’ai <a href="https://www.instagram.com/p/B9_Aq-mnAtx/">posté sur Instagram</a>.
+						</p>
+					</details>
 					<div class="videos">
 						<div class="youtube" data-embed="hsqt0fVKyo4" data-title="Des beignes !">
 							<div class="play-button"></div>
@@ -144,17 +157,22 @@
 						<span class="tag">Animation</span>
 						<span class="tag">3D</span>
 					</h4>
-					<p>
-						Dans le cadre du cours d’Intégration multiplateforme, j’ai réalisé quelques sites web, qui devaient tous être faits «&nbsp;à la main.&nbsp;» Le premier est le projet final de ce cours, qui consistait à créer un site web bilingue <em>responsive</em> sur un endroit fictif, contenant un formulaire (non-fonctionnel). Le deuxième projet a été créé pour le même cours. Le troisième projet a été réalisé dans le cadre du cours Design graphique. Le but était de créer une image de marque et un site web pour un foodtruck.
-						<ul>
-							<li><a href="https://finale.jakobbouchard.dev">Musée de Dunwall</a></li>
-							<li><a href="https://multiplateforme.jakobbouchard.dev">Minecraft&nbsp;: le phénomène</a></li>
-							<li><a href="https://patatecommune.jakobbouchard.dev">Foodtruck&nbsp;: La Patate Commune</a></li>
-						</ul>
-					</p>
-					<p>
-						Voici deux animations 3D que j’ai réalisées dans le cadre du cours Création 3D. La première, <em>Neon City</em>, a été réalisée partiellement dans Blender, mais le rendu est fait en Cinema 4D. Dans la seconde, c’était un gros travail en équipe, et la partie sombre <strong>(0:32)</strong> est celle que j’ai créée avec Blender. Les autres scènes sont faites par mes coéquipiers dans Cinema 4D.
-					</p>
+					<details>
+						<summary>
+							Quelques projets d’école, certains sont des sites web, d’autres sont des animations 3D.
+						</summary>
+						<p>
+							Dans le cadre du cours d’Intégration multiplateforme, j’ai réalisé quelques sites web, qui devaient tous être faits «&nbsp;à la main.&nbsp;» Le premier est le projet final de ce cours, qui consistait à créer un site web bilingue <em>responsive</em> sur un endroit fictif, contenant un formulaire (non-fonctionnel). Le deuxième projet a été créé pour le même cours. Le troisième projet a été réalisé dans le cadre du cours Design graphique. Le but était de créer une image de marque et un site web pour un foodtruck.
+							<ul>
+								<li><a href="https://finale.jakobbouchard.dev">Musée de Dunwall</a></li>
+								<li><a href="https://multiplateforme.jakobbouchard.dev">Minecraft&nbsp;: le phénomène</a></li>
+								<li><a href="https://patatecommune.jakobbouchard.dev">Foodtruck&nbsp;: La Patate Commune</a></li>
+							</ul>
+						</p>
+						<p>
+							Voici deux animations 3D que j’ai réalisées dans le cadre du cours Création 3D. La première, <em>Neon City</em>, a été réalisée partiellement dans Blender, mais le rendu est fait en Cinema 4D. Dans la seconde, c’était un gros travail en équipe, et la partie sombre <strong>(0:32)</strong> est celle que j’ai créée avec Blender. Les autres scènes sont faites par mes coéquipiers dans Cinema 4D.
+						</p>
+					</details>
 					<div class="videos">
 						<div class="youtube" data-embed="5nxsaNjCV_o" data-title="Neon City">
 							<div class="play-button"></div>
@@ -171,28 +189,33 @@
 						<span class="tag">WordPress</span>
 						<span class="tag">Pas WordPress</span>
 					</h4>
-					<p>
-						Comme Prosomo/Distantia est une entreprise de sites web, j’ai bien évidemment créé une multitude de sites web depuis que je travaille pour eux. Voici donc une liste non-exhaustive de sites web que j’ai créé. Au moment de la création de ce site, 3 sont encores en construction, donc je ne peux pas les inscrire ici. De plus, cette liste ne contient que les sites web que j’ai créé, pas ceux déjà existants sur lesquels j’ai dû apporter des corrections.
-						<ul>
-							<li><a href="https://toitureaudet.com">Toiture Audet</a></li>
-							<li><a href="https://www.soutienvictimesvaccination.ca/fr/">Programme de soutien aux victimes d’une vaccination</a></li>
-							<li><a href="https://carrierevdm.com">Carrière VDM</a></li>
-							<li><a href="https://val-des-bois.ca">Municipalité de Val-des-Bois</a></li>
-							<li><a href="https://www.larotonde.ca">La Rotonde – Le journal indépendant de l’Université d’Ottawa</a></li>
-						</ul>
-					</p>
-					<p>
-						Outre les projets que j’ai réalisé chez Distantia, j’ai également créé quelques sites web pour des amis ou pour moi-même. Voici donc encore une fois une liste non-exhaustive de sites web que j’ai créé.
-						<ul>
-							<li><a href="https://jakobbouchard.dev" hreflang="en">Mon site personnel (en anglais)</a></li>
-							<li><a href="https://uqat.jakobbouchard.dev">Ce site même (récursion)</a></li>
-							<li><a href="https://chip8.jakobbouchard.dev">Un émulateur de chip8 (brisé par moment)</a></li>
-							<li><a href="https://bhaktilarouche.com" hreflang="en">Site personnel pour Bhakti Larouche (en anglais)</a></li>
-						</ul>
-					</p>
-					<p>
-						J’ai aussi quelques autres projets de programmation sur <a href="https://github.com/jakobbouchard?tab=repositories">mon compte GitHub</a>.
-					</p>
+					<details>
+						<summary>
+							Des sites web que j’ai réalisé en travaillant chez Prosomo/Distantia, accompagnés de quelques sites web que j’ai fait dans mon temps libre ou pour des amis.
+						</summary>
+						<p>
+							Comme Prosomo/Distantia est une entreprise de sites web, j’ai bien évidemment créé une multitude de sites web depuis que je travaille pour eux. Voici donc une liste non-exhaustive de sites web que j’ai créé. Au moment de la création de ce site, 3 sont encores en construction, donc je ne peux pas les inscrire ici. De plus, cette liste ne contient que les sites web que j’ai créé, pas ceux déjà existants sur lesquels j’ai dû apporter des corrections.
+							<ul>
+								<li><a href="https://toitureaudet.com">Toiture Audet</a></li>
+								<li><a href="https://www.soutienvictimesvaccination.ca/fr/">Programme de soutien aux victimes d’une vaccination</a></li>
+								<li><a href="https://carrierevdm.com">Carrière VDM</a></li>
+								<li><a href="https://val-des-bois.ca">Municipalité de Val-des-Bois</a></li>
+								<li><a href="https://www.larotonde.ca">La Rotonde – Le journal indépendant de l’Université d’Ottawa</a></li>
+							</ul>
+						</p>
+						<p>
+							Outre les projets que j’ai réalisé chez Distantia, j’ai également créé quelques sites web pour des amis ou pour moi-même. Voici donc encore une fois une liste non-exhaustive de sites web que j’ai créé.
+							<ul>
+								<li><a href="https://jakobbouchard.dev" hreflang="en">Mon site personnel (en anglais)</a></li>
+								<li><a href="https://uqat.jakobbouchard.dev">Ce site même (récursion)</a></li>
+								<li><a href="https://chip8.jakobbouchard.dev">Un émulateur de chip8 (brisé par moment)</a></li>
+								<li><a href="https://bhaktilarouche.com" hreflang="en">Site personnel pour Bhakti Larouche (en anglais)</a></li>
+							</ul>
+						</p>
+						<p>
+							J’ai aussi quelques autres projets de programmation sur <a href="https://github.com/jakobbouchard?tab=repositories">mon compte GitHub</a>.
+						</p>
+					</details>
 				</li>
 			</ul>
 		</section>
