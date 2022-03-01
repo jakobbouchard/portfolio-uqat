@@ -46,7 +46,7 @@
 
 	// Lazy-load YouTube
 	document.querySelectorAll('.youtube').forEach((el) => {
-    const image = new Image();
+		const image = new Image();
 		image.src = 'https://img.youtube.com/vi/'+ el.dataset.embed +'/sddefault.jpg';
 		image.alt = el.dataset.title;
 		image.loading = 'lazy';
@@ -63,6 +63,6 @@
 
 			container.innerHTML = '';
 			container.appendChild(iframe);
-    });
+		});
 	});
 })();

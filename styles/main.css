@@ -85,9 +85,9 @@ abbr {
 	cursor: help;
 }
 code {
-  border-radius: .2rem;
-  padding: .1rem .3rem .2rem;
-  background: #e0e0e0;
+	border-radius: .2rem;
+	padding: .1rem .3rem .2rem;
+	background: #e0e0e0;
 }
 :focus {
 	outline: 2px dashed;
