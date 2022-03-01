@@ -213,7 +213,7 @@ main .youtube img {
 main .youtube .play-button {
 	width: 90px;
 	height: 60px;
-	background-color: #333;
+	background-color: var(--primary-color-dark);
 	box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
 	z-index: 1;
 	opacity: 0.8;
@@ -374,8 +374,12 @@ body.rainbow .project-list h4 .tag {
 body.rainbow header .arrow svg {
 	color: #222;
 }
-body.rainbow .youtube iframe {
+body.rainbow .youtube {
 	animation: 5s linear 0s infinite rainbow-border;
+}
+
+body.rainbow .youtube .play-button {
+	animation: 5s linear 0s infinite rainbow-background;
 }
 
 /*** Media queries ***/
