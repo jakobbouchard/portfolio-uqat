@@ -2,7 +2,15 @@ const CACHE_NAME = 'site-cache-v1';
 const urlsToCache = [
   '/',
   '/styles/main.css',
-  '/scripts/main.js'
+  '/scripts/main.js',
+	'/assets/fonts/Atkinson-Hyperlegible/Bold.woff2',
+	'/assets/fonts/Atkinson-Hyperlegible/BoldItalic.woff2',
+	'/assets/fonts/Atkinson-Hyperlegible/Italic.woff2',
+	'/assets/fonts/Atkinson-Hyperlegible/Regular.woff2',
+	'/apple-touch-icon.png',
+	'/icon-192.png',
+	'/icon-512.png',
+	'/icon.svg',
 ];
 
 self.addEventListener('install', function(event) {
