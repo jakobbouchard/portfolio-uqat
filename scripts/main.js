@@ -45,14 +45,16 @@
 	});
 
 	// Lazy-load YouTube
+	console.log(document.querySelectorAll('.youtube'))
 	document.querySelectorAll('.youtube').forEach((el) => {
 		const image = new Image();
 		image.src = 'https://img.youtube.com/vi/'+ el.dataset.embed +'/sddefault.jpg';
-		image.alt = el.dataset.title;
-		image.loading = 'lazy';
-		image.addEventListener('load', () => el.appendChild(image));
+		image.addEventListener('load', () => {
+			el.style.backgroundImage = `url(${image.src})`;
+		});
 
 		el.addEventListener('click', (event) => {
+			el.style.backgroundImage = 'none';
 			const container = event.currentTarget;
 			const iframe = document.createElement('iframe');
 			iframe.title = container.dataset.title;
