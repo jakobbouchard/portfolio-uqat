@@ -23,7 +23,7 @@
 	<meta property="og:url" content="https://uqat.jakobbouchard.dev/">
 	<meta property="og:title" content="Jakob Bouchard – Portfolio pour l’UQAT">
 	<meta property="og:description" content="Une courte liste de projets pour ma demande d’admission dans le programme Création et nouveaux médias de l’UQAT.">
-	<meta property="og:image" content="/assets/images/social.png">
+	<meta property="og:image" content="/social.png">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
@@ -37,6 +37,20 @@
 		data-do-not-track="true"
 		data-domains="uqat.jakobbouchard.dev"
 	></script>
+
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', function() {
+				navigator.serviceWorker.register('/sw.js').then(function(registration) {
+					// Registration was successful
+					console.log('ServiceWorker registration successful with scope: ', registration.scope);
+				}, function(err) {
+					// registration failed :(
+					console.log('ServiceWorker registration failed: ', err);
+				});
+			});
+		}
+	</script>
 </head>
 <body>
 	<header>
