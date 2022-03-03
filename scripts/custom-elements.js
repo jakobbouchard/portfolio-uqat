@@ -62,16 +62,40 @@ class YouTubePlayer extends HTMLElement {
 			</style>
 			<button part="play-button">Jouer la vidéo</button>
 		`;
+
 		this.image = new Image();
-		this.image.alt = this.getAttribute('title');
 		this.shadowRoot.appendChild(this.image);
 
 		this.iframe = document.createElement('iframe');
-		this.iframe.title = this.getAttribute('title');
 		this.iframe.allowFullscreen = true;
 		this.iframe.loading = 'lazy';
 		this.iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-		this.iframe.src = 'https://www.youtube-nocookie.com/embed/'+ this.getAttribute('video-id') +'?rel=0&showinfo=0&autoplay=1';
+	}
+
+	static get observedAttributes() {
+		return ['title', 'video-id'];
+	}
+
+	get title() {
+		return this.getAttribute('title');
+	}
+
+	set title(value) {
+		this.setAttribute('title', value);
+	}
+
+	get videoId() {
+		return this.getAttribute('video-id');
+	}
+
+	set videoId(value) {
+		this.setAttribute('video-id', value);
+	}
+
+	attributeChangedCallback(name, oldValue, newValue) {
+		this.image.alt = this.title;
+		this.iframe.title = this.title;
+		this.iframe.src = 'https://www.youtube-nocookie.com/embed/'+ this.videoId +'?rel=0&showinfo=0&autoplay=1';
 	}
 
 	connectedCallback() {
@@ -79,7 +103,7 @@ class YouTubePlayer extends HTMLElement {
 			const observer = new IntersectionObserver((entries) => {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
-						this.image.src = `https://img.youtube.com/vi/${this.getAttribute('video-id')}/sddefault.jpg`;
+						this.image.src = `https://img.youtube.com/vi/${this.videoId}/sddefault.jpg`;
 						observer.disconnect();
 					}
 				});
@@ -88,13 +112,9 @@ class YouTubePlayer extends HTMLElement {
 		}
 
 		this.addEventListener('click', () => {
-			this.shadowRoot.querySelector('img, button').remove();
+			this.shadowRoot.querySelectorAll('img, button').forEach((el) => el.remove());
 			this.shadowRoot.appendChild(this.iframe);
 		});
-	}
-
-	static get observedAttributes() {
-		return ['title', 'video-id'];
 	}
 }
 
