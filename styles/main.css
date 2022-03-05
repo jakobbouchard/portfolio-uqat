@@ -322,11 +322,11 @@ body.rainbow .project-list h4 .tag {
 body.rainbow header .arrow svg {
 	color: #222;
 }
-body.rainbow .youtube {
+body.rainbow youtube-player {
 	animation: 5s linear 0s infinite rainbow-border;
 }
 
-body.rainbow .youtube .play-button {
+body.rainbow youtube-player::part(play-button) {
 	animation: 5s linear 0s infinite rainbow-background;
 }
 
@@ -335,10 +335,10 @@ body.rainbow .youtube .play-button {
 	main .project-list .videos {
 		display: block;
 	}
-	main .project-list .videos .youtube {
+	main .project-list .videos youtube-player {
 		padding-bottom: 56.25%;
 	}
-	main .project-list .videos .youtube + .youtube {
+	main .project-list .videos youtube-player + youtube-player {
 		margin-top: .5rem;
 	}
 }
