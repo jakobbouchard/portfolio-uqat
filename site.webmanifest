@@ -1,16 +1,16 @@
 {
-  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "Jakob Bouchard – Portfolio pour l’UQAT",
-  "short_name": "Jakob Bouchard",
-  "description": "Une courte liste de projets pour ma demande d’admission dans le programme Création et nouveaux médias de l’UQAT.",
+	"$schema": "https://json.schemastore.org/web-manifest-combined.json",
+	"name": "Jakob Bouchard – Portfolio pour l’UQAT",
+	"short_name": "Jakob Bouchard",
+	"description": "Une courte liste de projets pour ma demande d’admission dans le programme Création et nouveaux médias de l’UQAT.",
 	"dir": "ltr",
 	"lang": "fr",
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#ecfdf5",
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#ecfdf5",
 	"theme_color": "#064e3b",
-  "icons": [
-    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
-    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
-  ]
+	"icons": [
+		{ "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+		{ "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+	]
 }

@@ -1,7 +1,18 @@
-(function() {
-
+(function () {
 	// Konami code
-	const pattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
+	const pattern = [
+		"ArrowUp",
+		"ArrowUp",
+		"ArrowDown",
+		"ArrowDown",
+		"ArrowLeft",
+		"ArrowRight",
+		"ArrowLeft",
+		"ArrowRight",
+		"b",
+		"a",
+		"Enter",
+	];
 	let current = 0;
 
 	function keyHandler(event) {
@@ -17,12 +28,12 @@
 		// If complete, toggle class and reset
 		if (pattern.length === current) {
 			current = 0;
-			document.body.classList.toggle('rainbow');
+			document.body.classList.toggle("rainbow");
 		}
-	};
+	}
 
 	// Listen for keydown events
-	document.addEventListener('keydown', keyHandler);
+	document.addEventListener("keydown", keyHandler);
 
 	// Add selection to `code` tags
 	function selectText(node) {
@@ -37,10 +48,10 @@
 			selection.removeAllRanges();
 			selection.addRange(range);
 		} else {
-			console.warn('Could not select text in node: Unsupported browser.');
+			console.warn("Could not select text in node: Unsupported browser.");
 		}
 	}
-	document.querySelectorAll('code').forEach((el) => {
-		el.addEventListener('click', () => selectText(el));
+	document.querySelectorAll("code").forEach((el) => {
+		el.addEventListener("click", () => selectText(el));
 	});
 })();

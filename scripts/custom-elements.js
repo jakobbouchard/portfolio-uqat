@@ -1,7 +1,7 @@
 class YouTubePlayer extends HTMLElement {
 	constructor() {
 		super();
-		this.attachShadow({ mode: 'open' });
+		this.attachShadow({ mode: "open" });
 		this.shadowRoot.innerHTML = `
 			<style>
 				:host {
@@ -66,56 +66,65 @@ class YouTubePlayer extends HTMLElement {
 		this.image = new Image();
 		this.shadowRoot.appendChild(this.image);
 
-		this.iframe = document.createElement('iframe');
+		this.iframe = document.createElement("iframe");
 		this.iframe.allowFullscreen = true;
-		this.iframe.loading = 'lazy';
-		this.iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+		this.iframe.loading = "lazy";
+		this.iframe.allow =
+			"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
 	}
 
 	static get observedAttributes() {
-		return ['title', 'video-id'];
+		return ["title", "video-id"];
 	}
 
 	get title() {
-		return this.getAttribute('title');
+		return this.getAttribute("title");
 	}
 
 	set title(value) {
-		this.setAttribute('title', value);
+		this.setAttribute("title", value);
 	}
 
 	get videoId() {
-		return this.getAttribute('video-id');
+		return this.getAttribute("video-id");
 	}
 
 	set videoId(value) {
-		this.setAttribute('video-id', value);
+		this.setAttribute("video-id", value);
 	}
 
 	attributeChangedCallback(name, oldValue, newValue) {
 		this.image.alt = this.title;
 		this.iframe.title = this.title;
-		this.iframe.src = 'https://www.youtube-nocookie.com/embed/'+ this.videoId +'?rel=0&showinfo=0&autoplay=1';
+		this.iframe.src =
+			"https://www.youtube-nocookie.com/embed/" +
+			this.videoId +
+			"?rel=0&showinfo=0&autoplay=1";
 	}
 
 	connectedCallback() {
 		if ("IntersectionObserver" in window) {
-			const observer = new IntersectionObserver((entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						this.image.src = `https://img.youtube.com/vi/${this.videoId}/sddefault.jpg`;
-						observer.disconnect();
-					}
-				});
-			}, { rootMargin: '0px 0px 100px 0px' });
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							this.image.src = `https://img.youtube.com/vi/${this.videoId}/sddefault.jpg`;
+							observer.disconnect();
+						}
+					});
+				},
+				{ rootMargin: "0px 0px 100px 0px" }
+			);
 			observer.observe(this);
 		}
 
-		this.addEventListener('click', () => {
-			this.shadowRoot.querySelectorAll('img, button').forEach((el) => el.remove());
+		this.addEventListener("click", () => {
+			this.shadowRoot
+				.querySelectorAll("img, button")
+				.forEach((el) => el.remove());
 			this.shadowRoot.appendChild(this.iframe);
 		});
 	}
 }
 
-window.customElements.define('youtube-player', YouTubePlayer);
+window.customElements.define("youtube-player", YouTubePlayer);
