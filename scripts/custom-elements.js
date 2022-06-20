@@ -7,34 +7,33 @@ class YouTubePlayer extends HTMLElement {
 				:host {
 					display: block;
 					position: relative;
-					padding-bottom: 56.25%;
-					max-width: 100%;
-					height: 0;
 					background-color: #000;
-					overflow: hidden;
 				}
 				button {
-					box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
+					box-shadow: 0 0 2rem rgba( 0,0,0,0.6 );
 					border: 0;
-					width: 90px;
-					height: 60px;
+					width: 4.5rem;
+					height: 3rem;
 					background-color: #000;
 					font-size: 0;
 					z-index: 1;
 					opacity: 0.8;
-					border-radius: 6px;
+					border-radius: .25rem;
 				}
 				button::before {
 					content: "";
 					border-style: solid;
-					border-width: 15px 0 15px 26.0px;
+					border-width: 0.75rem 0 0.75rem 1.25rem;
 					border-color: transparent transparent transparent #fff;
 				}
 				img {
-					width: 100%;
-					top: -16.84%;
-					left: 0;
 					opacity: 0.7;
+				}
+				img,
+				iframe {
+					display: block;
+					width: 100%;
+					aspect-ratio: 16 / 9;
 				}
 				img,
 				button {
@@ -42,13 +41,7 @@ class YouTubePlayer extends HTMLElement {
 				}
 				iframe {
 					border: 0;
-					height: 100%;
-					width: 100%;
-					top: 0;
-					left: 0;
 				}
-				img,
-				iframe,
 				button,
 				button::before {
 					position: absolute;
@@ -103,12 +96,13 @@ class YouTubePlayer extends HTMLElement {
 	}
 
 	connectedCallback() {
+		this.querySelector("a").remove();
 		if ("IntersectionObserver" in window) {
 			const observer = new IntersectionObserver(
 				(entries) => {
 					entries.forEach((entry) => {
 						if (entry.isIntersecting) {
-							this.image.src = `https://img.youtube.com/vi/${this.videoId}/sddefault.jpg`;
+							this.image.src = `https://img.youtube.com/vi/${this.videoId}/maxresdefault.jpg`;
 							observer.disconnect();
 						}
 					});

@@ -157,6 +157,9 @@ main {
 	padding: 1rem 1.5rem;
 	max-width: var(--content-width);
 }
+html.no-js .konami-hint {
+	display: none;
+}
 main section + section {
 	margin-top: 2rem;
 }
@@ -194,6 +197,9 @@ main .project-list h4 .tag + .tag {
 main youtube-player {
 	border: 5px solid var(--primary-color-dark);
 }
+html.no-js main youtube-player {
+	border: 0;
+}
 main youtube-player::part(play-button) {
 	background-color: var(--primary-color-dark);
 }
@@ -206,7 +212,6 @@ main .project-list .videos {
 }
 main .project-list .videos youtube-player {
 	flex: 1;
-	padding-bottom: calc(56.25% / 2);
 }
 /* Footer */
 footer {

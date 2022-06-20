@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="no-js">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/styles/main.css">
 
-	<!-- Favicons (TODO, with social) -->
+	<!-- Favicons -->
 	<link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
 	<link rel="icon" href="/icon.svg" type="image/svg+xml">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
@@ -39,14 +39,16 @@
 	></script>
 
 	<script>
-		if ('serviceWorker' in navigator) {
-			window.addEventListener('load', function() {
-				navigator.serviceWorker.register('/sw.js').then(function(registration) {
+		document.documentElement.classList.replace("no-js", "js");
+
+		if ("serviceWorker" in navigator) {
+			window.addEventListener("load", function() {
+				navigator.serviceWorker.register("/sw.js").then(function(registration) {
 					// Registration was successful
-					console.log('ServiceWorker registration successful with scope: ', registration.scope);
+					console.log("ServiceWorker registration successful with scope: ", registration.scope);
 				}, function(err) {
 					// registration failed :(
-					console.log('ServiceWorker registration failed: ', err);
+					console.log("ServiceWorker registration failed: ", err);
 				});
 			});
 		}
@@ -72,7 +74,7 @@
 		<section id="about">
 			<h3>À propos de moi</h3>
 			<p>
-				Bonjour, 👋 mon nom est Jakob, je suis développeur web chez <a href="https://prosomo.ca">Prosomo</a> (anciennement <a href="https://distantia.ca">Distantia</a>, mais fusionné avec Prosomo en janvier 2022). Voici mon portfolio pour le programme <em>Création et nouveaux médias</em>. Sur cette page vous trouverez plus d’une quinzaine de projets que j’ai réalisés. Ce sont tous des projets dont je suis plutôt fiers, certains de ces projets sont en jeux vidéos, d’autres en 3D, certains en web. Je crois que la diversité des projets démontrent bien mes habiletés de programmation. En passant, ce site web contient un <abbr title="↑↑↓↓←→←→BA Enter">Konami Code</abbr> qui fait jouer une animation. 😉
+				Bonjour, 👋 mon nom est Jakob, je suis développeur web chez <a href="https://prosomo.ca">Prosomo</a> (anciennement <a href="https://distantia.ca">Distantia</a>, mais fusionné avec Prosomo en janvier 2022). Voici mon portfolio pour le programme <em>Création et nouveaux médias</em>. Sur cette page vous trouverez plus d’une quinzaine de projets que j’ai réalisés. Ce sont tous des projets dont je suis plutôt fiers, certains de ces projets sont en jeux vidéos, d’autres en 3D, certains en web. Je crois que la diversité des projets démontrent bien mes habiletés de programmation. <span class="konami-hint">En passant, ce site web contient un <abbr title="↑↑↓↓←→←→BA Enter">Konami Code</abbr> qui fait jouer une animation. 😉</span>
 			</p>
 			<p>
 				Si vous voulez en connaître plus à propos de moi (ou mes chats 🐱), vous pouvez consulter <a href="https://jakobbouchard.dev/" hreflang="en">mon site personnel</a> (disponible en anglais seulement).
@@ -112,7 +114,9 @@
 							Au moment de la création de ce site, le projet est toujours en cours de développement et n’est pas encore disponible au public. La vidéo ci-dessous n’est pas représentative du projet final, mais elle montre une partie de l’expérience VR et représente bien l’idée générale.
 						</p>
 					</details>
-					<youtube-player video-id="rLD5zsYyT1g" title="Démo : Galerie Artblr"></youtube-player>
+					<youtube-player video-id="rLD5zsYyT1g" title="Démo : Galerie Artblr">
+						<a href="https://www.youtube.com/watch?v=rLD5zsYyT1g">Voir la vidéo « Démo : Galerie Artblr »</a>
+					</youtube-player>
 				</li>
 				<li id="doom-clone">
 					<h4>
@@ -132,7 +136,9 @@
 							Le projet est jouable et téléchargeable sur <a href="https://jakobbouchard.itch.io/doom-clone-demo">itch.io</a>. La page est protégée par un mot de passe, <code>uqat2022</code>.
 						</p>
 					</details>
-					<youtube-player video-id="2RXYxFi3aZE" title="Démo : Doom Clone"></youtube-player>
+					<youtube-player video-id="2RXYxFi3aZE" title="Démo : Doom Clone">
+						<a href="https://www.youtube.com/watch?v=2RXYxFi3aZE">Voir la vidéo « Démo : Doom Clone »</a>
+					</youtube-player>
 				</li>
 				<li id="beignes-et-viande">
 					<h4>
@@ -153,8 +159,12 @@
 						</p>
 					</details>
 					<div class="videos">
-						<youtube-player video-id="hsqt0fVKyo4" title="Des beignes !"></youtube-player>
-						<youtube-player video-id="T2qtJ-qfeIM" title="Splurb"></youtube-player>
+						<youtube-player video-id="hsqt0fVKyo4" title="Des beignes !">
+							<a href="https://www.youtube.com/watch?v=hsqt0fVKyo4">Voir la vidéo « Des beignes ! »</a>
+						</youtube-player>
+						<youtube-player video-id="T2qtJ-qfeIM" title="Splurb">
+							<a href="https://www.youtube.com/watch?v=T2qtJ-qfeIM">Voir la vidéo « Splurb »</a>
+						</youtube-player>
 					</div>
 				</li>
 				<li id="projets-ecole">
@@ -172,8 +182,12 @@
 						</p>
 					</details>
 					<div class="videos">
-						<youtube-player video-id="5nxsaNjCV_o" title="Neon City"></youtube-player>
-						<youtube-player video-id="gcUHo6V-jNg" title="Steampunk City"></youtube-player>
+						<youtube-player video-id="5nxsaNjCV_o" title="Neon City">
+							<a href="https://www.youtube.com/watch?v=5nxsaNjCV_o">Voir la vidéo « Neon City »</a>
+						</youtube-player>
+						<youtube-player video-id="gcUHo6V-jNg" title="Steampunk City">
+							<a href="https://www.youtube.com/watch?v=gcUHo6V-jNg">Voir la vidéo « Steampunk City »</a>
+						</youtube-player>
 					</div>
 				</li>
 				<li id="sites-web">
@@ -202,7 +216,7 @@
 						</ul>
 					</p>
 					<p>
-						J’ai aussi quelques autres projets de programmation sur <a href="https://github.com/jakobbouchard?tab=repositories">mon compte GitHub</a>.
+						J’ai aussi quelques autres projets de programmation sur <a href="https://github.com/jakobbouchard">mon compte GitHub</a> et <a href="https://gitlab.com/jakobbouchard">mon compte GitLab</a>.
 					</p>
 				</li>
 			</ul>
