@@ -390,3 +390,9 @@ body.rainbow youtube-player::part(play-button) {
 		margin-top: 0.5rem;
 	}
 }
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
